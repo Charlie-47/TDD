@@ -20,19 +20,24 @@ public class DPTestConfig {
     }
 
     public String metadataHostname() {
-        return properties.getProperty("metadata.hostname");
+        return properties.getProperty("metadata.hostname", "metadata-server");
     }
 
     public int metadataPort() {
-        return Integer.parseInt(properties.getProperty("metadata.port"));
+        return Integer.parseInt(properties.getProperty("metadata.port", "9090"));
+    }
+
+    public int metadataTimeout() {
+        return Integer.parseInt(properties
+                .getProperty("metadata.timeout", "3000"));
     }
 
     public String zeppelinHostname() {
-        return properties.getProperty("zeppelin.hostname");
+        return properties.getProperty("zeppelin.hostname", "zeppelin-server");
     }
 
     public int zeppelinPort() {
-        return Integer.parseInt(properties.getProperty("zeppelin.port"));
+        return Integer.parseInt(properties.getProperty("zeppelin.port", "80"));
     }
 
 }

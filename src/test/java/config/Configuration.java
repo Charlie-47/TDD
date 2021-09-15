@@ -8,6 +8,8 @@ public class Configuration {
 
     public static int METADATA_PORT = defaults.metadataPort();
 
+    public static int METADATA_TIMEOUT = defaults.metadataTimeout();
+
     public static String ZEPPELIN_HOSTNAME = defaults.zeppelinHostname();
 
     public static int ZEPPELIN_PORT = defaults.zeppelinPort();

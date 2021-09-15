@@ -6,7 +6,7 @@ public class VWHRunner {
 
     @Karate.Test
     Karate runTests() {
-        return Karate.run("virtual-warehouse")
+        return Karate.run("cluster-operations")
                 .relativeTo(getClass());
     }
 

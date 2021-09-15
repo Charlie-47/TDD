@@ -1,5 +1,6 @@
 Feature: calling tests of virtual warehouse
 
-Background:
-* url baseUrl
-
+  Scenario: test baidu
+    Given url 'http://www.baidu.com'
+    When method get
+    Then status 200
